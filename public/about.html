@@ -2,28 +2,42 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über Uns – CodeAxis</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Über uns – CodeAxis</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+ <header>
   <div class="container nav-container">
     <h1>CodeAxis</h1>
-    <nav>
-      <button class="burger" id="burger">&#9776;</button> <!-- Burger icon -->
-      <ul class="nav-links" id="nav-links">
+
+    <!-- Burger nur im Mobile-View -->
+    <button class="burger" id="burger" aria-label="Navigation öffnen">☰</button>
+
+    <!-- Desktop Navigation (sichtbar ab 769px) -->
+    <ul class="nav-links desktop-nav">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="services.html">Leistungen</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+
+    <!-- Mobile Slide‑In Menu (sichtbar bei <769px wenn .active) -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-menu" id="closeMenu" aria-label="Navigation schließen">×</button>
+      <ul class="nav-links">
         <li><a href="index.html">Startseite</a></li>
         <li><a href="about.html">Über uns</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="services.html">Leistungen</a></li>
         <li><a href="contact.html">Kontakt</a></li>
       </ul>
-    </nav>
+    </div>
   </div>
 </header>
 
- <section class="about">
+  <section class="about">
   <div class="container about-wrapper">
     <div class="about-text">
       <h2>Über uns</h2>
@@ -44,14 +58,12 @@
   </div>
 </section>
 
-
-
   <footer>
     <div class="container">
-      <p>&copy; 2025 Ihre Webentwicklungsagentur. Alle Rechte vorbehalten.</p>
+      <p>&copy; 2025 CodeAxis. Alle Rechte vorbehalten.</p>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
 
+  <script src="js/scripts.js"></script>
 </body>
 </html>
